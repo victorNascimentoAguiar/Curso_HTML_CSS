@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration:none ;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(68deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+div{
+    background-color:rgb(0,0,0,0.9);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color:white;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+button{
+    background-color:cyan;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    color:black;
+    font-size: 15px;   
+}
+button:hover{
+    background-color:rgb(0, 175, 175);
+    cursor: pointer;
+}
+nav{
+    background: linear-gradient(68deg, #2F2325 16.62%, #8E5D52 85.61%);
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: white;
+    font-family: "Sarala",sans-serif;
+    font-size:35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:bold
+}
+nav ul{
+    float: right;
+    margin-right:20px ;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding:7px 13px ;
+    border-radius:3px ;
+    text-transform: uppercase;
+}
+a.ativar,a:hover{
+    
+    transition: .5s;
+}
+.checkbtn{
+    font-size:30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+   
+}
+#check{
+    display: none;
+}
+@media(max-width: 952){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size:16px ;
+        
+    }
+}
+@media(max-width: 858px){
+    .checkt{
+        display: block;
+    }
+    ul{
+        position:fixed;
+        width: 100%;
+        height:100vh ;
+        background: #2c3e50;
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;       
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height:30px ;
+    }
+    nav ul li a{
+        font-size:20px ;
+    }
+    a:hover,a.ativar{
+        background:none;
+        color:#0082e6;
+    } 
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
