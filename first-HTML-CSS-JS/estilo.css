@@ -5,7 +5,7 @@
 }
 :root{
     --text-color: white;
-    --bg-url:url(./bg-desktop.jpg);
+    --bg-url:url(./bg-desktop.jpg) ;
     --stroke-color: rgba(255,255,255,0.5);
     --surface-color:rgba(255,255,255,0.05);
     --surface-color-hover: rgba(0,0,0,0.02);
@@ -14,7 +14,7 @@
 }
 .light{
     --text-color: black;
-    --bg-url:url(./bg-desktop-light.jpg);
+    --bg-url:url(./bg-desktop-light.jpg) ;
     --stroke-color: rgba(0,0,0,0.5);
     --surface-color: rgba(0,0,0,0.05);
     --surface-color-hover: rgba(0,0,0,0.02);
@@ -23,7 +23,7 @@
 }
 body{
     background-image: var(--bg-url);
-
+    height: 10vh;
 }
 body *{
     font-family: 'Inter', sans-serif;
@@ -68,10 +68,10 @@ body *{
    left: 0;
    z-index: 1;
    transform:translateY(-50%) ;
+   animation: slide-out 0.2s;
 }
 .light .switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 }
 .switch span{
     display: block;
@@ -136,4 +136,22 @@ footer{
     padding:24px 0 ;
     text-align: center;
     font-size: 14px;
+}
+/*animation8*/
+@keyframes slide-in {
+    from{
+        left:0;
+    }
+    to{
+        left: 50%;
+    }
+
+}
+@keyframes slide-out {
+    from{
+        left:50%;
+    }    
+    to{
+        left:0;
+    }
 }
