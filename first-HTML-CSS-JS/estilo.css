@@ -40,7 +40,8 @@ body *{
 }
 .perfil img{
     width: 112px;
-    
+    border-radius: 50%;
+    height: 112px;
 }
 .perfil p{
     font-weight: 500;
